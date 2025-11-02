@@ -62,3 +62,6 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+
+# Trial PYNBs
+/pynbs
