@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mavi-companion"
-version = "0.3.0"
+version = "0.3.2"
 description = "Mavi Companion CLI - fast coding assistant for documentation lookups."
 requires-python = ">=3.9"
 license = { text = "MIT" }
@@ -12,9 +12,18 @@ authors = [
   { name = "Vishnu Chityala" }
 ]
 dependencies = [
-  "typer>=0.12",
-  "rich>=13.0",
-  "keyring>=24.0"
+  "typer>=0.9",
+  "rich>=13",
+  "keyring>=24",
+  "langchain==1.0.3",
+  "langchain-core==1.0.2",
+  "langchain-google-genai==3.0.0",
+  "langchain-openai==1.0.1",
+  "langgraph==1.0.2",
+  "langgraph-checkpoint==3.0.0",
+  "langgraph-prebuilt==1.0.2",
+  "langgraph-sdk==0.2.9",
+  "langsmith==0.4.39"
 ]
 
 [project.scripts]
