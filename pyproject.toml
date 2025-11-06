@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mavi-companion"
+version = "0.5.7"
+description = "Mavi Companion CLI - fast coding assistant for documentation lookups."
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Vishnu Chityala" }
+]
+
+dependencies = [
+    "torch",
+    "transformers",
+    "langchain",
+    "langchain-google-genai",
+    "langchain-huggingface",
+    "langchain-community",
+    "keyring",
+    "typer",
+    "rich"
+]
+
+[project.scripts]
+mavi = "mavi_companion.main:app"
+mavi-companion = "mavi_companion.main:app"
+
+[tool.setuptools.packages.find]
+include = ["mavi_companion*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "ruff",
+    "twine",
+    "build"
+]
